@@ -113,7 +113,7 @@ class CorporateImageUpdate(GenUpdate):
         return super(CorporateImageUpdate, self).form_valid(form)
 
 
-class CorporateImageUpdateModal(GenUpdateModal):
+class CorporateImageUpdateModal(CorporateImageUpdate, GenUpdateModal):
     pass
 
 
