@@ -35,6 +35,12 @@ class CorporateImageForm(GenModelForm):
                 ['business_name', 6],
                 ['nid', 4],
                 ['public', 2],
+                ['address', 8],
+                ['zipcode', 4],
+                ['city', 6],
+                ['province', 6],
+                ['phone', 6],
+                ['email', 6],
                 ['digital_sign', 4],
                 ['company_seal', 4],
                 ['company_logo', 4],
@@ -45,7 +51,8 @@ class CorporateImageForm(GenModelForm):
     @staticmethod
     def __groups_details__():
         g = [
-            (_('Details'), 12,
+            (
+                _('Details'), 12,
                 ['business_name', 6],
                 ['nid', 4],
                 ['digital_sign', 6],
@@ -54,6 +61,13 @@ class CorporateImageForm(GenModelForm):
                 ['name_file_seal', 6],
                 ['company_logo', 6],
                 ['name_file_logo', 6],
-                ['public', 6],)
+                ['public', 6],
+                ['address', 8],
+                ['zipcode', 4],
+                ['city', 6],
+                ['province', 6],
+                ['phone', 6],
+                ['email', 6],
+            )
         ]
         return g

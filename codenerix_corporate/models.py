@@ -38,6 +38,12 @@ class CorporateImage(CodenerixModel):
     company_logo = ImageAngularField(_("Company logo"), upload_to=upload_path, max_length=200, blank=True, null=True)
     name_file_logo = models.CharField(_("Name file company logo"), max_length=254, blank=True, null=True)
     public = models.BooleanField(_("Public"), default=False)
+    address = models.CharField(_("Address"), max_length=254, blank=True, null=True)
+    zipcode = models.CharField(_("Zipcode"), max_length=10, blank=True, null=True)
+    province = models.CharField(_("Province"), max_length=254, blank=True, null=True)
+    city = models.CharField(_("City"), max_length=254, blank=True, null=True)
+    phone = models.CharField(_("Phone"), max_length=60, blank=True, null=True)
+    email = models.EmailField(_("Email"), max_length=60, blank=True, null=True)
 
     def __unicode__(self):
         return self.__str__()
@@ -47,16 +53,16 @@ class CorporateImage(CodenerixModel):
 
     def __fields__(self, info):
         fields = []
-        fields.append(('nid', _('NID'), 100))
-        fields.append(('business_name', _('Business name'), 100))
-        fields.append(('digital_sign', _('Digital sign'), 15))
-        fields.append(('name_file_sign', _('Name file digital sign'), 15))
-        fields.append(('company_seal', _('Company seal'), 15))
-        fields.append(('name_file_seal', _('Name file company seal'), 15))
-        fields.append(('company_logo', _('Company logo'), 15))
-        fields.append(('name_file_logo', _('Name file company logo'), 15))
-        fields.append(('public', _('Public'), 100))
-        fields.append(('updated', _('Last Update'), 100))
+        fields.append(('nid', _('NID')))
+        fields.append(('business_name', _('Business name')))
+        fields.append(('address', _('Address')))
+        fields.append(('zipcode', _('Zipcode')))
+        fields.append(('province', _('Province')))
+        fields.append(('city', _('City')))
+        fields.append(('phone', _('Phone')))
+        fields.append(('email', _('Email')))
+        fields.append(('public', _('Public')))
+        fields.append(('updated', _('Last Update')))
         return fields
 
     def save(self, *args, **kwards):
