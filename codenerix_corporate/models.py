@@ -25,9 +25,10 @@ from codenerix.models import CodenerixModel
 from codenerix.exceptions import CodenerixException
 from codenerix.lib.helpers import upload_path
 from codenerix.fields import ImageAngularField
+from codenerix_geodata.models import GeoAddress
 
 
-class CorporateImage(CodenerixModel):
+class CorporateImage(GeoAddress, CodenerixModel):
 
     nid = models.CharField(_("NID"), max_length=20, blank=True)
     business_name = models.CharField(_("Business name"), max_length=254, blank=True, null=True)
@@ -38,28 +39,18 @@ class CorporateImage(CodenerixModel):
     company_logo = ImageAngularField(_("Company logo"), upload_to=upload_path, max_length=200, blank=True, null=True)
     name_file_logo = models.CharField(_("Name file company logo"), max_length=254, blank=True, null=True)
     public = models.BooleanField(_("Public"), default=False)
-    address = models.CharField(_("Address"), max_length=254, blank=True, null=True)
-    zipcode = models.CharField(_("Zipcode"), max_length=10, blank=True, null=True)
-    province = models.CharField(_("Province"), max_length=254, blank=True, null=True)
-    city = models.CharField(_("City"), max_length=254, blank=True, null=True)
-    phone = models.CharField(_("Phone"), max_length=60, blank=True, null=True)
     email = models.EmailField(_("Email"), max_length=60, blank=True, null=True)
-
-    def __unicode__(self):
-        return self.__str__()
 
     def __str__(self):
         return u"{}".format(self.business_name)
 
+    def __unicode__(self):
+        return self.__str__()
+
     def __fields__(self, info):
-        fields = []
-        fields.append(('nid', _('NID')))
-        fields.append(('business_name', _('Business name')))
-        fields.append(('address', _('Address')))
-        fields.append(('zipcode', _('Zipcode')))
-        fields.append(('province', _('Province')))
-        fields.append(('city', _('City')))
-        fields.append(('phone', _('Phone')))
+        fields = super(CorporateImage, self).__fields__(info)
+        fields.insert(0, ('nid', _('NID')))
+        fields.insert(0, ('business_name', _('Business name')))
         fields.append(('email', _('Email')))
         fields.append(('public', _('Public')))
         fields.append(('updated', _('Last Update')))
