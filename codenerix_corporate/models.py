@@ -28,7 +28,7 @@ from codenerix.fields import ImageAngularField
 from codenerix_geodata.models import GeoAddress
 
 
-class CorporateImage(GeoAddress, CodenerixModel):
+class CorporateImage(CodenerixModel, GeoAddress):
 
     nid = models.CharField(_("NID"), max_length=20, blank=True)
     business_name = models.CharField(_("Business name"), max_length=254, blank=True, null=True)
