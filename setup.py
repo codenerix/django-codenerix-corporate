@@ -18,7 +18,7 @@ setup(
     license='Apache License Version 2.0',
     description='Codenerix Corporate is a module that enables CODENERIX to manage corporate/enterprise details on serveral platforms in a general manner.',
     long_description=README,
-    url='https://github.com/centrologic/django-codenerix-corporate',
+    url='https://github.com/codenerix/django-codenerix-corporate',
     author=", ".join(codenerix_corporate.__authors__),
     keywords=['django', 'codenerix', 'management', 'erp', 'crm', 'corporate', 'files', 'geo data', 'corparate image'],
     platforms=['OS Independent'],
