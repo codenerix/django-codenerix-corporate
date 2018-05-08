@@ -4,15 +4,15 @@ django-codenerix-corporate
 
 Codenerix Corporate is a module that enables `CODENERIX.com <http://www.codenerix.com/>`_ to manage corporate/enterprise data on several platforms in a general manner. Model for managing business's information
 
-.. image:: http://www.centrologic.com/wp-content/uploads/2017/01/logo-codenerix.png
+.. image:: http://www.codenerix.com/wp-content/uploads/2018/05/codenerix.png
     :target: http://www.codenerix.com
-    :alt: Try our demo with Centrologic Cloud
+    :alt: Try our demo with Codenerix Cloud
 
 *********
 Changelog
 *********
 
-2018-01-17 - Codenerix Corporate v1.x is incompatible with v2.x, `what has changed and how to migrate to v2.x? <https://github.com/centrologic/django-codenerix-corporate/wiki/Codenerix-Corporate-version-1.x-is-icompatible-with-2.x>`_.
+2018-01-17 - Codenerix Corporate v1.x is incompatible with v2.x, `what has changed and how to migrate to v2.x? <https://github.com/codenerix/django-codenerix-corporate/wiki/Codenerix-Corporate-version-1.x-is-icompatible-with-2.x>`_.
 
 ****
 Demo
@@ -20,7 +20,7 @@ Demo
 
 You can have a look to our `demo online <http://demo.codenerix.com>`_.
 
-You can find some working examples in GITHUB at `django-codenerix-examples <https://github.com/centrologic/django-codenerix-examples>`_ project.
+You can find some working examples in GITHUB at `django-codenerix-examples <https://github.com/codenerix/django-codenerix-examples>`_ project.
 
 **********
 Quickstart
@@ -48,16 +48,10 @@ Quickstart
 Documentation
 *************
 
-Coming soon... do you help us? `Centrologic <http://www.centrologic.com/>`_
+Coming soon... do you help us? `Codenerix <http://www.codenerix.com/>`_
 
-******************
-Commercial support
-******************
+*******
+Credits
+*******
 
-This project is backed by `Centrologic <http://www.centrologic.com/>`_. You can discover more in `CODENERIX.com <http://www.codenerix.com/>`_.
-If you need help implementing or hosting django-codenerix-corporates, please contact us:
-http://www.centrologic.com/contacto/
-
-.. image:: http://www.centrologic.com/wp-content/uploads/2015/09/logo-centrologic.png
-    :target: http://www.centrologic.com
-    :alt: Centrologic is supported mainly by Centrologic Computational Logistic Center
+This project has been possible thanks to `Centrologic <http://www.centrologic.com/>`_.
