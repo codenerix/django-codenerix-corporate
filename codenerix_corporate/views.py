@@ -19,7 +19,7 @@
 # limitations under the License.
 import json
 
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 from codenerix.views import GenList, GenCreate, GenCreateModal, GenUpdate, GenUpdateModal, GenDelete
 
 from codenerix_corporate.models import CorporateImage
